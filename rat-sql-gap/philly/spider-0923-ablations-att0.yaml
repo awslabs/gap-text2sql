@@ -1,0 +1,40 @@
+{
+   "code": {
+      "local_dir": "$CONFIG_DIR/../"
+   },
+   "data": {
+      "local_dir": "$CONFIG_DIR/../../data",
+      "remote_dir": "spider/bawang"
+   },
+   "description": "Ablations for model submitted to Spider on 2019-09-21, att numbers [0]",
+   "environment": {
+      "image": "pytorch/pytorch:0.4.1-cuda9-cudnn7-devel"
+   },
+   "jobs": [
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh false false 0"
+         ],
+         "name": "norels_amfalse_alfalse_att0",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true false 0"
+         ],
+         "name": "norels_amtrue_alfalse_att0",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true true 0"
+         ],
+         "name": "norels_amtrue_altrue_att0",
+         "sku": "G1"
+      }
+   ],
+   "target": {
+      "cluster": "rr2",
+      "vc": "msrlabs"
+   }
+}

@@ -1,0 +1,85 @@
+local _0428_base = import 'nl2code-0428-base.libsonnet';
+local _data_path = 'data/spider-20190205/';
+local _output_from = true;
+
+function(args) _0428_base(output_from=_output_from, data_path=_data_path) + {
+    local lr_s = '%0.1e' % args.lr,
+    local bert_lr_s = '%0.1e' % args.bert_lr,
+    local end_lr_s = if args.end_lr == 0 then '0e0' else '%0.1e' % args.end_lr,
+
+    model_name: 'bs=%(bs)d,lr=%(lr)s,bert_lr=%(bert_lr)s,end_lr=%(end_lr)s,att=%(att)d' % (args + {
+        lr: lr_s,
+        bert_lr: bert_lr_s,
+        end_lr: end_lr_s,
+    }),
+
+    model+: {
+        encoder+: {
+            name: 'spider-bert',
+            batch_encs_update:: null,
+            question_encoder:: null,
+            column_encoder:: null,
+            table_encoder:: null,
+            dropout:: null,
+            update_config+:  {
+                name: 'relational_transformer',
+                num_layers: 8,
+                num_heads: 8,
+                sc_link: true,
+            },
+            top_k_learnable:: null,
+            word_emb_size:: null,
+        },
+        encoder_preproc+: {
+            word_emb:: null,
+            min_freq:: null,
+            max_count:: null,
+            compute_sc_link: true,
+            fix_issue_16_primary_keys: true,
+            count_tokens_in_word_emb_for_vocab:: null,
+            save_path: _data_path + 'nl2code-1001,output_from=%s,emb=bert' % [_output_from,],
+        },
+        decoder_preproc+: {
+            grammar+: {
+                end_with_from: true,
+                infer_from_conditions: true,
+            },
+            save_path: _data_path + 'nl2code-1001,output_from=%s,emb=bert' % [_output_from,],
+
+            compute_sc_link:: null,
+            fix_issue_16_primary_keys:: null,
+        },
+        decoder+: {
+            name: 'NL2Code',
+            dropout: 0.20687225956012834,
+            desc_attn: 'mha',
+            enc_recurrent_size: 768,
+            recurrent_size : 512,
+            loss_type: 'softmax',
+            use_align_mat: true,
+            use_align_loss: true,
+        },
+    },
+
+    train+: {
+        batch_size: args.bs,
+        num_batch_accumulated: 4,
+        clip_grad: 1,
+
+        model_seed: args.att,
+        data_seed:  args.att,
+        init_seed:  args.att,
+    },
+
+    optimizer: {
+        name: 'bertAdamw',
+        lr: 0.0,
+        bert_lr: args.bert_lr,
+    },
+
+    lr_scheduler+: {
+        name: 'warmup_polynomial_group',
+        start_lrs: [args.lr, args.bert_lr],
+    }
+
+}

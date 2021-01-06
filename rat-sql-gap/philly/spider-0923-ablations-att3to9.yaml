@@ -1,0 +1,166 @@
+{
+   "code": {
+      "local_dir": "$CONFIG_DIR/../"
+   },
+   "data": {
+      "local_dir": "$CONFIG_DIR/../../data",
+      "remote_dir": "spider/bawang"
+   },
+   "description": "Ablations for model submitted to Spider on 2019-09-21, att numbers [3, 4, 5, 6, 7, 8, 9]",
+   "environment": {
+      "image": "pytorch/pytorch:0.4.1-cuda9-cudnn7-devel"
+   },
+   "jobs": [
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh false false 3"
+         ],
+         "name": "norels_amfalse_alfalse_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh false false 4"
+         ],
+         "name": "norels_amfalse_alfalse_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh false false 5"
+         ],
+         "name": "norels_amfalse_alfalse_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh false false 6"
+         ],
+         "name": "norels_amfalse_alfalse_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh false false 7"
+         ],
+         "name": "norels_amfalse_alfalse_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh false false 8"
+         ],
+         "name": "norels_amfalse_alfalse_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh false false 9"
+         ],
+         "name": "norels_amfalse_alfalse_att9",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true false 3"
+         ],
+         "name": "norels_amtrue_alfalse_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true false 4"
+         ],
+         "name": "norels_amtrue_alfalse_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true false 5"
+         ],
+         "name": "norels_amtrue_alfalse_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true false 6"
+         ],
+         "name": "norels_amtrue_alfalse_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true false 7"
+         ],
+         "name": "norels_amtrue_alfalse_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true false 8"
+         ],
+         "name": "norels_amtrue_alfalse_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true false 9"
+         ],
+         "name": "norels_amtrue_alfalse_att9",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true true 3"
+         ],
+         "name": "norels_amtrue_altrue_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true true 4"
+         ],
+         "name": "norels_amtrue_altrue_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true true 5"
+         ],
+         "name": "norels_amtrue_altrue_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true true 6"
+         ],
+         "name": "norels_amtrue_altrue_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true true 7"
+         ],
+         "name": "norels_amtrue_altrue_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true true 8"
+         ],
+         "name": "norels_amtrue_altrue_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/spider-0923-ablations.sh true true 9"
+         ],
+         "name": "norels_amtrue_altrue_att9",
+         "sku": "G1"
+      }
+   ],
+   "target": {
+      "cluster": "rr2",
+      "vc": "msrlabs"
+   }
+}

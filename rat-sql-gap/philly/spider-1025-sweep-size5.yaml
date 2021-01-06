@@ -1,0 +1,46 @@
+description: Spider Exps 1025
+
+target:
+  vc: msrlabs
+  cluster: rr2
+  
+environment:
+  registry: phillyregistry.azurecr.io
+  image: microsoft_pytorch:v1.1.0_gpu_cuda9.0_py36_release_gpuenv_hvd0.16.1
+
+code:
+  local_dir: $CONFIG_DIR/../
+
+data:
+  local_dir: $CONFIG_DIR/../../data
+  remote_dir: spider/bawang
+
+search:
+  job_template:
+    name: search_hyper_{experiment_name:s}_bs{bs}_nba{num_batch_accumulated}_lr{lr:.5e}_bert_lr{bert_lr:.5e}_bt{bert_token_type}_co{clause_order}
+    sku: G1
+    command:
+    - philly/spider-1025-sweep.sh {bs} {num_batch_accumulated} {lr} {bert_lr} {bert_token_type} {clause_order}
+  type: random
+  max_trials: 5
+  params:
+    - name: lr
+      spec: log_uniform
+      low: 5e-4
+      high: 2e-3
+    - name: bert_lr
+      spec: log_uniform
+      high: 3e-5
+      low: 1e-6
+    - name: bs
+      spec: discrete
+      values: [4]
+    - name:  num_batch_accumulated
+      spec: discrete
+      values: [2, 4, 6]
+    - name: bert_token_type
+      spec: discrete
+      values: ["true", "false"]
+    - name: clause_order
+      spec: discrete
+      values: ['SWGOIF', 'SWOGIF', 'SGWOIF', 'SGOWIF', 'SOWGIF', 'SOGWIF', 'WSGOIF', 'WSOGIF', 'WGSOIF', 'WGOSIF', 'WOSGIF', 'WOGSIF', 'GSWOIF', 'GSOWIF', 'GWSOIF', 'GWOSIF', 'GOSWIF', 'GOWSIF', 'OSWGIF', 'OSGWIF', 'OWSGIF', 'OWGSIF', 'OGSWIF', 'OGWSIF']

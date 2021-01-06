@@ -1,0 +1,11 @@
+{
+  "keyword": ["<s>", "<pad>", "</s>", "select", "where", "_value_", "_values_", "group", "by", "order", "limit", "from", "join", "on",
+            "count", "distinct", "and", "desc", "avg", "having", "max", "in", "<", "sum", "intersect", "not", "min",
+            "except", "all", "or", "asc", "like", "!=", "union", "between", "into",
+            "when", "else", "case", "then", "true", "false", "end", "as", "left", "right", "natural", "full", "convert", "cast",
+            "is", "null", "<=>", "/", "(", ".", "$", "=>", "_", "]", "[", ">", "#", "!", ",", "*", "&", "|", "?", "~", "-", "<=", "'",
+            ")", "}", "+", "\"", "{", "=", "^", "@", "<", ">="],
+  "label_padding_token": "<pad>",
+  "label_eos_token": "</s>",
+  "label_bos_token": "<s>"
+}

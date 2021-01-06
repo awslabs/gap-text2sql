@@ -1,0 +1,61 @@
+{
+   "code": {
+      "local_dir": "$CONFIG_DIR/../"
+   },
+   "data": {
+      "local_dir": "$CONFIG_DIR/../../data",
+      "remote_dir": "spider/bawang"
+   },
+   "description": "Ablations for Spider 1204 glove, att numbers [0]",
+   "environment": {
+      "image": "pytorch/pytorch:nightly-devel-cuda9.2-cudnn7"
+   },
+   "jobs": [
+      {
+         "command": [
+            "philly/entry_point_cuda92.sh python3 -u train.py --config configs/spider-20190205/nl2code-1204-glove-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 0,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"schema_edges\\\": true,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "1204_setrue_sltrue_amtrue_altrue_att0",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point_cuda92.sh python3 -u train.py --config configs/spider-20190205/nl2code-1204-glove-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 0,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"schema_edges\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "1204_sefalse_sltrue_amtrue_altrue_att0",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point_cuda92.sh python3 -u train.py --config configs/spider-20190205/nl2code-1204-glove-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 0,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"schema_edges\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "1204_setrue_slfalse_amtrue_altrue_att0",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point_cuda92.sh python3 -u train.py --config configs/spider-20190205/nl2code-1204-glove-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 0,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"schema_edges\\\": true,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "1204_setrue_sltrue_amtrue_alfalse_att0",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point_cuda92.sh python3 -u train.py --config configs/spider-20190205/nl2code-1204-glove-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 0,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"schema_edges\\\": true,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "1204_setrue_sltrue_amfalse_alfalse_att0",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point_cuda92.sh python3 -u train.py --config configs/spider-20190205/nl2code-1204-glove-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 0,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"schema_edges\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "1204_sefalse_slfalse_amfalse_alfalse_att0",
+         "sku": "G1"
+      }
+   ],
+   "target": {
+      "cluster": "rr2",
+      "vc": "msrlabs"
+   }
+}

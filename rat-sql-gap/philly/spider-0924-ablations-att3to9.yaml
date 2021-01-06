@@ -1,0 +1,558 @@
+{
+   "code": {
+      "local_dir": "$CONFIG_DIR/../"
+   },
+   "data": {
+      "local_dir": "$CONFIG_DIR/../../data",
+      "remote_dir": "spider/bawang"
+   },
+   "description": "Ablations for model submitted to Spider on 2019-09-24, att numbers [3, 4, 5, 6, 7, 8, 9]",
+   "environment": {
+      "image": "pytorch/pytorch:0.4.1-cuda9-cudnn7-devel"
+   },
+   "jobs": [
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 3,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mtfalse_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 4,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mtfalse_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 5,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mtfalse_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 6,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mtfalse_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 7,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mtfalse_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 8,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mtfalse_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 9,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mtfalse_att9",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 3,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mtfalse_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 4,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mtfalse_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 5,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mtfalse_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 6,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mtfalse_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 7,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mtfalse_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 8,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mtfalse_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 9,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mtfalse_att9",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 3,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mtfalse_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 4,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mtfalse_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 5,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mtfalse_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 6,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mtfalse_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 7,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mtfalse_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 8,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mtfalse_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 9,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mtfalse_att9",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 3,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mtfalse_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 4,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mtfalse_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 5,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mtfalse_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 6,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mtfalse_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 7,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mtfalse_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 8,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mtfalse_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 9,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mtfalse_att9",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 3,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_sltrue_fpkfalse_mtfalse_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 4,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_sltrue_fpkfalse_mtfalse_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 5,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_sltrue_fpkfalse_mtfalse_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 6,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_sltrue_fpkfalse_mtfalse_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 7,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_sltrue_fpkfalse_mtfalse_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 8,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_sltrue_fpkfalse_mtfalse_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 9,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_sltrue_fpkfalse_mtfalse_att9",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 3,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_sltrue_fpktrue_mtfalse_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 4,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_sltrue_fpktrue_mtfalse_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 5,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_sltrue_fpktrue_mtfalse_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 6,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_sltrue_fpktrue_mtfalse_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 7,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_sltrue_fpktrue_mtfalse_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 8,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_sltrue_fpktrue_mtfalse_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 9,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_sltrue_fpktrue_mtfalse_att9",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 3,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_sltrue_fpktrue_mtfalse_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 4,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_sltrue_fpktrue_mtfalse_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 5,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_sltrue_fpktrue_mtfalse_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 6,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_sltrue_fpktrue_mtfalse_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 7,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_sltrue_fpktrue_mtfalse_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 8,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_sltrue_fpktrue_mtfalse_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 9,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": false,\\\"schema_link\\\": true}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_sltrue_fpktrue_mtfalse_att9",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 3,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mttrue_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 4,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mttrue_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 5,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mttrue_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 6,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mttrue_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 7,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mttrue_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 8,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mttrue_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 9,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": false,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpkfalse_mttrue_att9",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 3,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mttrue_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 4,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mttrue_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 5,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mttrue_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 6,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mttrue_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 7,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mttrue_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 8,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mttrue_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": false,\\\"att\\\": 9,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amfalse_alfalse_slfalse_fpktrue_mttrue_att9",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 3,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mttrue_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 4,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mttrue_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 5,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mttrue_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 6,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mttrue_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 7,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mttrue_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 8,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mttrue_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": false,\\\"align_mat\\\": true,\\\"att\\\": 9,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_alfalse_slfalse_fpktrue_mttrue_att9",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 3,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mttrue_att3",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 4,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mttrue_att4",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 5,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mttrue_att5",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 6,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mttrue_att6",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 7,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mttrue_att7",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 8,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mttrue_att8",
+         "sku": "G1"
+      },
+      {
+         "command": [
+            "philly/entry_point.sh python3 train.py --config configs/spider-20190205/nl2code-0924-ablations.jsonnet --config-args \"{\\\"align_loss\\\": true,\\\"align_mat\\\": true,\\\"att\\\": 9,\\\"data_path\\\": \\\"$$PT_DATA_DIR/\\\",\\\"fix_primary_keys\\\": true,\\\"merge_types\\\": true,\\\"schema_link\\\": false}\" --logdir \"$$PT_OUTPUT_DIR/logdirs\""
+         ],
+         "name": "0924_amtrue_altrue_slfalse_fpktrue_mttrue_att9",
+         "sku": "G1"
+      }
+   ],
+   "target": {
+      "cluster": "rr2",
+      "vc": "msrlabs"
+   }
+}
