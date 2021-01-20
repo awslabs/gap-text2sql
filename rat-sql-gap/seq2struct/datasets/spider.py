@@ -5,7 +5,7 @@ import torch
 import networkx as nx
 
 from seq2struct.utils import registry
-from third_party.spider import evaluation
+from seq2struct.datasets.spider_lib import evaluation
 
 
 @attr.s
