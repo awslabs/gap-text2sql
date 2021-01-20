@@ -1,2 +1,9 @@
---find-links https://download.pytorch.org/whl/torch_stable.html
---editable .
+transformers==3.0
+jsonnet~=0.14.0
+nltk~=3.4
+networkx~=2.2
+entmax
+pyrsistent~=0.14.9
+bpemb~=0.2.11
+stanford-corenlp~=3.9.2
+torchtext~=0.3.1
