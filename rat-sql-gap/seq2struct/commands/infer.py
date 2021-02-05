@@ -46,6 +46,7 @@ class Inferer:
         # 2. Restore its parameters
         saver = saver_mod.Saver({"model": model})
         last_step = saver.restore(logdir, step=step, map_location=self.device, item_keys=["model"])
+
         if not last_step:
             raise Exception('Attempting to infer on untrained model')
         return model
@@ -81,6 +82,29 @@ class Inferer:
                 else:
                     sliced_data = data
                 self._visualize_attention(model, args.beam_size, args.output_history, sliced_data, args.res1, args.res2, args.res3, output)
+
+    def _infer_one(self, model, data_item, preproc_item, beam_size, output_history=False, use_heuristic=True):
+        if use_heuristic:
+            # TODO: from_cond should be true from non-bert model
+            beams = spider_beam_search.beam_search_with_heuristics(
+                model, data_item, preproc_item, beam_size=beam_size, max_steps=1000, from_cond=False)
+        else:
+            beams = beam_search.beam_search(
+                model, data_item, preproc_item, beam_size=beam_size, max_steps=1000)
+        decoded = []
+        for beam in beams:
+            model_output, inferred_code = beam.inference_state.finalize()
+
+            decoded.append({
+                'orig_question': data_item.orig["question"],
+                'model_output': model_output,
+                'inferred_code': inferred_code,
+                'score': beam.score,
+                **({
+                       'choice_history': beam.choice_history,
+                       'score_history': beam.score_history,
+                   } if output_history else {})})
+        return decoded
 
     def _inner_infer(self, model, beam_size, output_history, sliced_orig_data, sliced_preproc_data, output, use_heuristic=False):
         for i, (orig_item, preproc_item) in enumerate(

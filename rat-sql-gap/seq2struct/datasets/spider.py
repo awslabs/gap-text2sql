@@ -111,6 +111,81 @@ def load_tables(paths):
 
     return schemas, eval_foreign_key_maps
 
+def load_tables_from_schema_dict(schema_dict):
+    schemas = {}
+    eval_foreign_key_maps = {}
+    schema_dicts = [schema_dict]
+
+    for schema_dict in schema_dicts:
+        tables = tuple(
+            Table(
+                id=i,
+                name=name.split(),
+                unsplit_name=name,
+                orig_name=orig_name,
+            )
+            for i, (name, orig_name) in enumerate(zip(
+                schema_dict['table_names'], schema_dict['table_names_original']))
+        )
+        columns = tuple(
+            Column(
+                id=i,
+                table=tables[table_id] if table_id >= 0 else None,
+                name=col_name.split(),
+                unsplit_name=col_name,
+                orig_name=orig_col_name,
+                type=col_type,
+            )
+            for i, ((table_id, col_name), (_, orig_col_name), col_type) in enumerate(zip(
+                schema_dict['column_names'],
+                schema_dict['column_names_original'],
+                schema_dict['column_types']))
+        )
+
+        # Link columns to tables
+        for column in columns:
+            if column.table:
+                column.table.columns.append(column)
+
+        for column_id in schema_dict['primary_keys']:
+            # Register primary keys
+            column = columns[column_id]
+            column.table.primary_keys.append(column)
+
+        foreign_key_graph = nx.DiGraph()
+        for source_column_id, dest_column_id in schema_dict['foreign_keys']:
+            # Register foreign keys
+            source_column = columns[source_column_id]
+            dest_column = columns[dest_column_id]
+            source_column.foreign_key_for = dest_column
+            foreign_key_graph.add_edge(
+                source_column.table.id,
+                dest_column.table.id,
+                columns=(source_column_id, dest_column_id))
+            foreign_key_graph.add_edge(
+                dest_column.table.id,
+                source_column.table.id,
+                columns=(dest_column_id, source_column_id))
+
+        db_id = schema_dict['db_id']
+        assert db_id not in schemas
+        schemas[db_id] = Schema(db_id, tables, columns, foreign_key_graph, schema_dict)
+        eval_foreign_key_maps[db_id] = evaluation.build_foreign_key_map(schema_dict)
+
+    return schemas, eval_foreign_key_maps
+
+@registry.register('dataset_infer', 'spider')
+class SpiderDatasetInfer(torch.utils.data.Dataset):
+    def __init__(self, schemas, eval_foreign_key_maps, db_path):
+        self.db_path = db_path
+        self.examples = []
+        self.schemas, self.eval_foreign_key_maps = schemas, eval_foreign_key_maps
+
+    def __len__(self):
+        return len(self.examples)
+
+    def __getitem__(self, idx):
+        return self.examples[idx]
 
 @registry.register('dataset', 'spider')
 class SpiderDataset(torch.utils.data.Dataset): 
