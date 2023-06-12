@@ -1,4 +1,4 @@
-transformers==3.0
+transformers==4.30.0
 jsonnet~=0.14.0
 nltk~=3.4
 networkx~=2.2
